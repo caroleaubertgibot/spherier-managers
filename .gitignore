@@ -1,0 +1,26 @@
+# Secrets — ne doivent JAMAIS partir sur GitHub
+.env
+.env.local
+
+# Dépendances (réinstallables via package-lock.json)
+node_modules/
+
+# Artefacts Netlify / Deno
+.netlify/
+deno.lock
+
+# Réglages locaux macOS et outillage
+.DS_Store
+.claude/
+
+# Captures de vérification, régénérables
+screenshot-*.png
+
+# Données de membres — ne doivent JAMAIS être versionnées.
+# Un UUID de membre est le seul secret protégeant ses données, et l'historique Git
+# conserve tout indéfiniment : une suppression ultérieure ne l'efface pas.
+# Les sauvegardes de RÉFÉRENTIEL, elles, restent dans le dépôt : aucune donnée
+# personnelle, et elles servent à reconstruire.
+sauvegardes/snapshots-*.csv
+sauvegardes/comptes-*.json
+sauvegardes/clients-*.json

@@ -1,0 +1,66 @@
+# Seul le contenu de public/ est servi au navigateur. Le template, les scripts de
+# build et le code des fonctions restent hors du site public : les fonctions sont
+# exécutées côté serveur, elles n'ont jamais à être téléchargeables.
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[dev]
+  framework = "#static"
+  publish = "public"
+
+# Les pratiques sont des pages publiques — pas de secret, pas de donnée de membre —
+# mais elles n'ont rien à faire dans un moteur de recherche : elles n'ont de sens que
+# pour un membre qui vient de son sphérier. Chaque page porte déjà sa balise `robots` ;
+# cet en-tête la double au niveau du serveur, pour les moteurs qui ne liraient pas le
+# HTML, et pour les fichiers qui n'en sont pas.
+[[headers]]
+  for = "/pratiques/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Chemins courts côté navigateur, indépendants de l'emplacement des fonctions.
+[[redirects]]
+  from = "/api/referential"
+  to = "/.netlify/functions/referential"
+  status = 200
+
+# Diagnostic protégé par le REFRESH_TOKEN : il dit quelle variable manque et ce que
+# Notion répond, sans jamais divulguer de valeur. Les autres fonctions renvoient un
+# message générique — nécessaire pour une API publique, mais qui rend une panne
+# indiagnosticable sans accès aux journaux.
+[[redirects]]
+  from = "/api/diagnostic"
+  to = "/.netlify/functions/diagnostic"
+  status = 200
+
+[[redirects]]
+  from = "/api/refresh"
+  to = "/.netlify/functions/refresh"
+  status = 200
+
+[[redirects]]
+  from = "/api/note"
+  to = "/.netlify/functions/note"
+  status = 200
+
+[[redirects]]
+  from = "/api/state"
+  to = "/.netlify/functions/state"
+  status = 200
+
+[[redirects]]
+  from = "/api/snapshot"
+  to = "/.netlify/functions/snapshot"
+  status = 200
+
+# La racine sert le sphérier sans redirection visible : https://<site>/?c=<uuid>
+# fonctionne donc aussi bien que /spherier-v2.html?c=<uuid>.
+#
+# Le nom de fichier garde son suffixe `-v2` alors que le v1 n'existe plus : les liens
+# déjà transmis aux membres le portent, et un lien de sphérier doit survivre à nos
+# renommages. La racine est de toute façon l'adresse à donner désormais.
+[[redirects]]
+  from = "/"
+  to = "/spherier-v2.html"
+  status = 200

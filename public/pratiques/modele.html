@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Hors moteurs de recherche. Une règle d'en-tête couvre tout le dossier
+     /pratiques/ dans netlify.toml ; cette ligne-ci la double dans la page même,
+     pour les moteurs qui liraient le fichier sans passer par le serveur.
+     NE PAS RETIRER. -->
+<meta name="robots" content="noindex, nofollow">
+
+<!-- ▼▼▼ TITRE DE L'ONGLET — le nom de la pratique, suivi de « · Manager-Coach » ▼▼▼ -->
+<title>Modèle de pratique · Manager-Coach</title>
+<!-- ▲▲▲ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Inter+Tight:wght@400;500&display=swap">
+<link rel="stylesheet" href="pratique.css">
+</head>
+<body>
+
+<!-- =========================================================================
+     MODÈLE DE PRATIQUE — mode d'emploi
+
+     1. Dupliquer ce fichier dans le même dossier, sous un nom en minuscules,
+        sans accent, avec des tirets : « identifier-mes-besoins.html ».
+        Ce nom devient l'adresse de la pratique :
+        https://spherier-managers.netlify.app/pratiques/exemple-de-pratique.html
+        Une fois l'adresse transmise, le nom du fichier ne se change plus.
+
+     2. Ne modifier QUE ce qui se trouve entre les repères ▼▼▼ et ▲▲▲.
+        Tout le reste — en-tête, styles, pied de page — est commun à toutes les
+        pratiques et se règle dans pratique.css.
+
+     3. Toute section est facultative : supprimer le bloc entier si elle ne sert
+        pas. Une page sans citation, sans exemple ou avec un seul moment reste
+        juste.
+
+     ÉCRITURE. On tutoie, mais on s'adresse à plusieurs lectrices et lecteurs :
+     pas de « je t'invite », pas de « je te propose » — ces tournures viennent du
+     coaching individuel et sonnent faux sur une page lue par toute la cohorte.
+     On écrit directement : « Dépose un carnet sur ta table de nuit. »
+     Et on accorde aux deux : fier·ère, prêt·e, attentif·ve.
+     ========================================================================= -->
+
+<div class="page">
+
+  <header>
+    <!-- ▼▼▼ FIL — « Pratique » et la thématique à laquelle elle se rattache ▼▼▼ -->
+    <p class="fil">Pratique · <b>Nom de la thématique</b></p>
+    <!-- ▲▲▲ -->
+
+    <!-- ▼▼▼ TITRE DE LA PRATIQUE ▼▼▼ -->
+    <h1>Titre de la pratique</h1>
+    <!-- ▲▲▲ -->
+
+    <!-- ▼▼▼ INTENTION — une à deux phrases : ce que cette pratique développe ▼▼▼ -->
+    <p class="intention">
+      Ce que cette pratique développe, en une ou deux phrases. Ce qu'on vient y
+      chercher, et ce qui change à force de la faire.
+    </p>
+    <!-- ▲▲▲ -->
+
+    <!-- ▼▼▼ CITATION — facultative : supprimer ce bloc si elle ne sert pas ▼▼▼ -->
+    <p class="citation">Une phrase qui tient la pratique, et qu'on retient.</p>
+    <!-- ▲▲▲ -->
+
+    <!-- ▼▼▼ REPÈRES — durée, rythme, matériel. Retirer les lignes inutiles ▼▼▼ -->
+    <ul class="reperes">
+      <li><b>Durée</b> 5 minutes</li>
+      <li><b>Rythme</b> chaque soir</li>
+      <li><b>Matériel</b> un carnet</li>
+    </ul>
+    <!-- ▲▲▲ -->
+  </header>
+
+  <!-- ▼▼▼ AVANT DE COMMENCER — facultatif : la mise en place, le cadre, ce qu'il
+           faut savoir avant de s'y mettre. Supprimer la section si inutile ▼▼▼ -->
+  <section>
+    <h2>Avant de commencer</h2>
+    <p class="chapeau">
+      La mise en place : où, quand, avec quoi, et dans quel esprit. C'est ici que
+      se dit ce qui met en confiance — par exemple que ces notes n'ont pas à être
+      lues par qui que ce soit, ou qu'on ne cherche pas la belle forme.
+    </p>
+  </section>
+  <!-- ▲▲▲ -->
+
+  <!-- ▼▼▼ BLOC DE QUESTIONS — un bloc par MOMENT de la pratique.
+           Dupliquer la section entière pour ajouter « En fin de semaine », etc. ▼▼▼ -->
+  <section>
+    <span class="moment">Chaque jour</span>
+    <h2>Titre de ce temps de pratique</h2>
+    <p class="chapeau">
+      Une phrase d'introduction, si le moment en demande une. Sinon, supprimer
+      cette ligne et passer directement aux questions.
+    </p>
+
+    <ul class="questions">
+      <li>
+        <p class="question">La question à se poser.</p>
+        <p class="consigne">
+          La consigne qui l'accompagne : comment s'y prendre, où regarder, ce qui
+          aide. Supprimer ce paragraphe si la question se suffit à elle-même.
+        </p>
+        <p class="consigne aparte">
+          Une remarque de second plan — un repère, une précision, un lien vers un
+          outil : <a href="https://exemple.fr">la roue des émotions</a>.
+        </p>
+      </li>
+
+      <li>
+        <p class="question">Une deuxième question.</p>
+        <p class="consigne">Sa consigne.</p>
+      </li>
+
+      <li>
+        <p class="question">Une troisième question.</p>
+      </li>
+    </ul>
+  </section>
+  <!-- ▲▲▲ -->
+
+  <!-- ▼▼▼ EXEMPLE — facultatif. Une situation concrète, pas une consigne :
+           c'est pour cela qu'il ne ressemble pas au reste de la page ▼▼▼ -->
+  <section>
+    <h2>Un exemple</h2>
+    <div class="exemple">
+      <p>La situation, racontée en une ou deux phrases.</p>
+      <p class="suite">Ce qu'elle produit.</p>
+      <p class="suite">Ce qu'elle révèle.</p>
+    </div>
+  </section>
+  <!-- ▲▲▲ -->
+
+  <!-- ▼▼▼ POUR FINIR — facultatif : l'intégration, le recul, l'intention pour
+           la suite. Supprimer la section si la pratique n'en a pas besoin ▼▼▼ -->
+  <section>
+    <h2>Pour finir</h2>
+    <ul class="liste">
+      <li>Un premier point de recul.</li>
+      <li>Un deuxième.</li>
+      <li>Ce que tu as envie de poser pour la suite.</li>
+    </ul>
+  </section>
+  <!-- ▲▲▲ -->
+
+  <!-- Pied de page COMMUN à toutes les pratiques : un filet et la signature.
+       La zone au-dessus de la signature est volontairement vide — elle attend
+       une phrase de clôture, si un jour il y en a une à dire. Ne pas modifier. -->
+  <footer class="pied">
+    <span class="marque">Pyxis · Club Manager-Coach</span>
+  </footer>
+
+</div>
+</body>
+</html>

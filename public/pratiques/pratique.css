@@ -1,0 +1,194 @@
+/* ===========================================================================
+   Feuille de style COMMUNE à toutes les pratiques.
+   ===========================================================================
+
+   Une seule feuille pour toutes les pages : restyler les pratiques, c'est
+   modifier ce fichier, jamais les pages elles-mêmes. Une page de pratique ne
+   contient donc que du texte et des balises — aucun style.
+
+   L'univers est celui du sphérier : même nuit, même doré, mêmes polices, et
+   les mêmes tailles de texte qu'après l'agrandissement de septembre. Une
+   pratique s'ouvre dans un onglet, elle ne doit pas donner l'impression
+   d'avoir quitté le club.
+
+   Un seul thème, sombre, délibérément : la page garde sa lumière quel que soit
+   le réglage du téléphone. */
+
+:root {
+  --nuit: #0a0e1a;
+  --nuit-profonde: #050811;
+  --papier: #f0ebe0;
+  --papier-doux: #c9c3b6;
+  --pierre: #8d8677;
+  --or: #c9a661;
+  --or-clair: #e3c88a;
+  --trait: rgba(240, 235, 224, .13);
+  --trait-faible: rgba(240, 235, 224, .07);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--nuit);
+  color: var(--papier);
+  font-family: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 17.5px;
+  line-height: 1.7;
+  /* Un ciel discret, comme dans le sphérier, mais sans animation : on vient ici
+     pour lire et pour faire, pas pour regarder. */
+  background-image:
+    radial-gradient(ellipse at 20% -10%, rgba(201, 166, 97, .07), transparent 60%),
+    radial-gradient(ellipse at 90% 0%, rgba(124, 156, 200, .05), transparent 55%);
+  background-repeat: no-repeat;
+}
+
+/* Colonne de lecture : environ 60 caractères, la largeur où l'œil ne se perd pas. */
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 34px 22px 72px;
+}
+
+a { color: var(--or); text-underline-offset: 3px; }
+a:hover { color: var(--or-clair); }
+a:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; border-radius: 3px; }
+
+/* --- En-tête ------------------------------------------------------------- */
+
+.fil {
+  font-size: 13px; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--pierre);
+}
+.fil b { color: var(--or); font-weight: 500; }
+
+h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(31px, 7vw, 40px);
+  line-height: 1.12;
+  margin: 10px 0 0;
+  text-wrap: balance;
+}
+
+.intention {
+  margin: 16px 0 0;
+  font-size: 18.5px;
+  color: var(--papier-doux);
+}
+
+/* La citation est une respiration, pas une consigne : elle se détache. */
+.citation {
+  margin: 20px 0 0;
+  padding-left: 16px;
+  border-left: 2px solid color-mix(in srgb, var(--or) 55%, transparent);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--papier);
+}
+
+/* --- Repères : durée, rythme, matériel ----------------------------------- */
+
+.reperes {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 24px 0 0; padding: 0; list-style: none;
+}
+.reperes li {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 14px; border-radius: 999px;
+  border: 1px solid var(--trait); background: rgba(240, 235, 224, .03);
+  font-size: 15px; color: var(--papier-doux);
+  /* Pas de `nowrap` : un repère peut être long — « chaque jour, et un temps en fin
+     de semaine » déborde la largeur d'un téléphone. Il passe à la ligne dans sa
+     pastille plutôt que de pousser la page de côté. */
+  max-width: 100%;
+}
+.reperes b { flex-shrink: 0; }
+.reperes b { color: var(--pierre); font-weight: 400; letter-spacing: .1em;
+  text-transform: uppercase; font-size: 12.5px; }
+
+/* --- Sections ------------------------------------------------------------ */
+
+section { margin-top: 44px; }
+
+h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500; font-size: 26px; line-height: 1.25;
+  margin: 0 0 4px; text-wrap: balance;
+}
+
+/* Le moment auquel un bloc se pratique : chaque jour, en fin de semaine.
+   C'est l'information qui structure la page, elle passe donc AVANT le titre. */
+.moment {
+  display: block;
+  font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--or); margin-bottom: 7px;
+}
+
+.chapeau { margin: 0 0 18px; color: var(--papier-doux); }
+
+/* --- Questions ----------------------------------------------------------- */
+
+.questions { list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 12px; }
+
+.questions > li {
+  padding: 18px 20px;
+  border: 1px solid var(--trait-faible); border-radius: 13px;
+  background: rgba(240, 235, 224, .022);
+}
+
+.question {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px; line-height: 1.35; color: var(--papier);
+  text-wrap: pretty;
+}
+
+/* La consigne accompagne la question : plus petite, en retrait, jamais au même
+   niveau qu'elle. C'est ce qui distingue « quoi se demander » de « comment ». */
+.consigne { margin: 10px 0 0; font-size: 16.5px; color: var(--papier-doux); }
+.consigne + .consigne { margin-top: 8px; }
+.aparte { color: var(--pierre); font-style: italic; }
+
+/* --- Exemple -------------------------------------------------------------- */
+
+.exemple {
+  padding: 20px 22px; border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--or) 30%, transparent);
+  background: rgba(201, 166, 97, .06);
+}
+.exemple p { margin: 0 0 10px; }
+.exemple p:last-child { margin-bottom: 0; }
+.exemple .suite { color: var(--papier-doux); }
+.exemple .suite::before { content: '→'; color: var(--or); margin-right: 9px; }
+
+/* --- Listes simples, dans « Pour finir » ou ailleurs ---------------------- */
+
+.liste { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.liste li { padding-left: 20px; position: relative; color: var(--papier-doux); }
+.liste li::before { content: '✦'; position: absolute; left: 0; top: 2px;
+  font-size: 10px; color: var(--or); }
+
+/* --- Pied de page --------------------------------------------------------- */
+
+.pied {
+  margin-top: 56px; padding-top: 22px;
+  border-top: 1px solid var(--trait);
+  font-size: 16px; color: var(--pierre);
+}
+.pied p { margin: 0; }
+.pied .marque {
+  display: block; margin-top: 16px;
+  font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+  font-size: 15px; letter-spacing: .08em; color: var(--pierre);
+}
+
+@media print {
+  body { background: #fff; color: #111; }
+  .questions > li, .exemple { border-color: #ccc; background: none; }
+  .question, h1, h2 { color: #111; }
+}
