@@ -2,7 +2,7 @@ require('dotenv').config({ quiet: true });
 
 const { Client, collectPaginatedAPI } = require('@notionhq/client');
 const { DIMENSIONS, ECHELLE, VERSION_REFERENTIEL, DIFFICULTES, CIEL,
-        MAX_CIBLES_MAINTENANT, CLUB, verifierClub } = require('./club.config.js');
+        MAX_CIBLES_MAINTENANT, CLUB, verifierClub, NOM_PAR_NOTION } = require('./club.config.js');
 
 const { NOTION_TOKEN, DB_THEMES, DB_COMPETENCES, DB_RESSOURCES } = process.env;
 
@@ -35,6 +35,26 @@ function selection(page, nom) {
 // renvoie pas Infinity, dont la différence avec elle-même donne NaN et casserait le tri.
 function rangCompetence(competence) {
   return competence.order ?? Number.MAX_SAFE_INTEGER;
+}
+
+// La dimension stockée dans Notion peut différer du libellé affiché : Notion
+// interdit la virgule dans une option de select. On retraduit donc vers le `name`
+// canonique de club.config.js, seul nom que le navigateur connaisse.
+//
+// Une valeur inconnue n'est PAS corrigée en silence : la thématique ne se
+// rattacherait alors à aucune dimension et disparaîtrait du ciel sans un mot. On la
+// laisse passer telle quelle — visiblement fausse plutôt qu'invisible — et on la
+// signale dans les journaux de la fonction.
+function dimensionCanonique(page) {
+  const brut = selection(page, 'Dimension');
+  if (!brut) return '';
+  const canonique = NOM_PAR_NOTION.get(brut);
+  if (!canonique) {
+    console.warn(`[sphérier] dimension inconnue « ${brut} » sur la thématique « ${texte(page, 'Name')} » : `
+      + `elle n'apparaîtra pas dans le ciel. Options attendues : ${[...NOM_PAR_NOTION.keys()].join(' · ')}`);
+    return brut;
+  }
+  return canonique;
 }
 
 function multiSelection(page, nom) {
@@ -124,7 +144,7 @@ async function lireReferentielDepuisNotion() {
       id: p.id,
       code: texte(p, 'Code'),
       name: texte(p, 'Name'),
-      dimension: selection(p, 'Dimension'),
+      dimension: dimensionCanonique(p),
       definition: texte(p, 'DefinitionThematique'),
       // Une arête vers une thématique archivée serait un lien mort dans le graphe.
       feeds: relations(p, 'Nourrit').filter((id) => idsThemesActifs.has(id)),

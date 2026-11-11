@@ -19,7 +19,7 @@ const { Client } = require('@notionhq/client');
 //   node export-notion.js                 -> sauvegardes/export-notion-<date>.json
 //   SORTIE=chemin.json node export-notion.js
 
-const { VERSION_REFERENTIEL } = require('./club.config.js');
+const { VERSION_REFERENTIEL, NOM_PAR_NOTION } = require('./club.config.js');
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
@@ -86,7 +86,9 @@ async function exporter() {
     name: txt(p, 'Name'),
     code: txt(p, 'Code'),
     definition: txt(p, 'DefinitionThematique'),
-    dimension: selection(p, 'Dimension'),
+    // Traduit vers le libellé canonique, sinon l'export ne serait pas réimportable :
+    // le garde-fou de l'import rejetterait une dimension qu'il ne connaît pas.
+    dimension: NOM_PAR_NOTION.get(selection(p, 'Dimension')) ?? selection(p, 'Dimension'),
     ordre: nombre(p, 'Ordre'),
     position_x: nombre(p, 'Position X'),
     position_y: nombre(p, 'Position Y'),

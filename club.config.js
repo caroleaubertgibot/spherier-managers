@@ -97,6 +97,9 @@ const DIMENSIONS = [
   {
     id: 'MOI',
     name: 'Moi, manager',
+    // Notion REFUSE la virgule dans le nom d'une option de select. Ce nom-ci ne
+    // peut donc pas être stocké tel quel — voir NOM_PAR_NOTION plus bas.
+    nom_notion: 'Moi manager',
     definition: "La dimension Moi, manager réunit ce qui se travaille sur soi pour pouvoir coacher : croire en la capacité de l'autre, tenir le cadre et l'éthique d'un manager qui coache, être présent, se réguler, choisir sa casquette, et continuer à apprendre le geste.",
     definition_ui: "Ce qui se travaille sur toi avant de pouvoir coacher : croire en la capacité de l'autre, tenir ton cadre, être vraiment là, te réguler, et choisir la casquette que tu portes.",
     couleur: '#c98a5e',
@@ -116,6 +119,23 @@ const DIMENSIONS = [
     couleur: '#87a06a',
   },
 ];
+
+// --- Le nom côté Notion -----------------------------------------------------------
+//
+// Jusqu'ici une seule chaîne servait à deux choses : ce que le membre LIT, et la
+// valeur par laquelle une thématique se RATTACHE à sa dimension (l'option du select
+// `Dimension` dans Notion). Or Notion interdit la virgule dans le nom d'une option
+// de select, et « Moi, manager » est le libellé voulu côté membre.
+//
+// D'où ce dédoublement, déclaré ICI et nulle part ailleurs :
+//   `name`       — ce qu'on affiche, et l'identifiant canonique dans tout le code ;
+//   `nom_notion` — ce qu'on stocke. Absent, c'est `name` qui est stocké.
+//
+// `referentiel-v2.js` retraduit à la LECTURE, `importer-classeur.js` traduit à
+// l'ÉCRITURE. Rien d'autre dans le code ne connaît le nom Notion : le navigateur ne
+// voit jamais que les `name`.
+const NOTION_PAR_NOM = new Map(DIMENSIONS.map((d) => [d.name, d.nom_notion ?? d.name]));
+const NOM_PAR_NOTION = new Map(DIMENSIONS.map((d) => [d.nom_notion ?? d.name, d.name]));
 
 // --- L'échelle d'auto-évaluation --------------------------------------------------
 //
@@ -221,6 +241,8 @@ module.exports = {
   verifierClub,
   VERSION_REFERENTIEL,
   DIMENSIONS,
+  NOTION_PAR_NOM,
+  NOM_PAR_NOTION,
   ECHELLE,
   DIFFICULTES,
   NIVEAU_MIN,

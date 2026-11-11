@@ -1,0 +1,1084 @@
+{
+ "extrait_le": "2026-11-11T15:36:03+00:00",
+ "source": "Sphérier Manager-Coach - V2.xls",
+ "principe": "Toutes les relations sont exprimées par Code, jamais par nom ni par identifiant de page.",
+ "referentiel_version": 1,
+ "themes": [
+  {
+   "name": "Posture de coach",
+   "code": "POSTURE_COACH",
+   "definition": "Capacité à aborder un collaborateur en partant du principe qu'il est capable, créatif et entier, avec curiosité et sans jugement, plutôt qu'en expert qui diagnostique et prescrit.",
+   "dimension": "Moi, manager",
+   "ordre": 1,
+   "position_x": 320,
+   "position_y": 80,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "PRESENCE"
+   ],
+   "exemples_demandes": "« Je sais ce qu'il devrait faire, pourquoi perdre du temps à lui demander ? », réflexe de diagnostic, collaborateur vu à travers ses manques"
+  },
+  {
+   "name": "Cadre et éthique du manager-coach",
+   "code": "CADRE_ETHIQUE",
+   "definition": "Capacité à tenir les limites d'un manager qui coache : il reste manager et évaluateur, il garantit la confidentialité, il sait quand le coaching n'est pas la bonne réponse et vers qui orienter.",
+   "dimension": "Moi, manager",
+   "ordre": 2,
+   "position_x": 720,
+   "position_y": 80,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "CHOIX_POSTURE"
+   ],
+   "exemples_demandes": "Confidence utilisée à l'entretien annuel, coaching d'un sujet qui relève de la RH ou de la santé, collaborateur qui ne sait pas si on le coache ou si on l'évalue"
+  },
+  {
+   "name": "Présence",
+   "code": "PRESENCE",
+   "definition": "Capacité à être pleinement là dans l'échange : attention entière, à l'aise avec le silence et l'inconnu, en suivant ce qui se passe plutôt que son plan.",
+   "dimension": "Moi, manager",
+   "ordre": 3,
+   "position_x": 320,
+   "position_y": 245,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "REGULATION"
+   ],
+   "exemples_demandes": "Regard sur l'écran pendant l'entretien, silence comblé en deux secondes, entretien déroulé comme une check-list"
+  },
+  {
+   "name": "Régulation de soi en séance",
+   "code": "REGULATION",
+   "definition": "Capacité à reconnaître ce qui se passe en soi pendant l'échange — impatience, envie de sauver, agacement — et à le mettre de côté pour rester au service du collaborateur.",
+   "dimension": "Moi, manager",
+   "ordre": 4,
+   "position_x": 320,
+   "position_y": 410,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [],
+   "exemples_demandes": "Envie irrépressible de donner la solution, agacement devant un collaborateur qui tourne en rond, émotion du manager qui prend la place de celle du collaborateur"
+  },
+  {
+   "name": "Choisir sa casquette",
+   "code": "CHOIX_POSTURE",
+   "definition": "Capacité à distinguer les moments où l'on coache de ceux où l'on dirige, forme ou décide, à l'annoncer, et à sortir du coaching quand la situation l'exige.",
+   "dimension": "Moi, manager",
+   "ordre": 5,
+   "position_x": 720,
+   "position_y": 245,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [],
+   "exemples_demandes": "« Je coachais alors qu'il fallait trancher », décision déguisée en question, collaborateur perdu sur le rôle de son manager"
+  },
+  {
+   "name": "Contrat de l'entretien",
+   "code": "CONTRAT",
+   "definition": "Capacité à établir avec le collaborateur ce qu'il veut obtenir de la conversation, à quoi il saura qu'il l'a obtenu, et à y revenir en cours d'échange.",
+   "dimension": "Moi et mon collaborateur",
+   "ordre": 1,
+   "position_x": 320,
+   "position_y": 80,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "QUESTIONS"
+   ],
+   "exemples_demandes": "Entretien qui part sur la plainte et finit sans objectif, « on a bien parlé mais de quoi ? », sujet du manager imposé au collaborateur"
+  },
+  {
+   "name": "Confiance et sécurité",
+   "code": "CONFIANCE",
+   "definition": "Capacité à créer un espace où le collaborateur peut dire ce qu'il pense et ce qu'il ressent sans craindre d'être jugé ni que cela se retourne contre lui.",
+   "dimension": "Moi et mon collaborateur",
+   "ordre": 2,
+   "position_x": 720,
+   "position_y": 80,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "ECOUTE_ACTIVE"
+   ],
+   "exemples_demandes": "Collaborateur qui dit ce que le manager veut entendre, émotion minimisée, « ça va » de façade"
+  },
+  {
+   "name": "Écoute active",
+   "code": "ECOUTE_ACTIVE",
+   "definition": "Capacité à écouter ce qui est dit, comment c'est dit et ce qui n'est pas dit, à le refléter au collaborateur et à lui montrer qu'il a été entendu.",
+   "dimension": "Moi et mon collaborateur",
+   "ordre": 3,
+   "position_x": 720,
+   "position_y": 245,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "QUESTIONS",
+    "FEEDBACK"
+   ],
+   "exemples_demandes": "Manager qui prépare sa réponse pendant que l'autre parle, mots entendus mais émotion ratée, reformulation absente"
+  },
+  {
+   "name": "Questions qui déplacent",
+   "code": "QUESTIONS",
+   "definition": "Capacité à poser des questions ouvertes, courtes, nées de ce que le collaborateur vient de dire, qui l'amènent à réfléchir plutôt qu'à se justifier ou à deviner la réponse attendue.",
+   "dimension": "Moi et mon collaborateur",
+   "ordre": 4,
+   "position_x": 520,
+   "position_y": 245,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "PRISE_CONSCIENCE"
+   ],
+   "exemples_demandes": "« Tu ne crois pas que… ? », trois questions enchaînées, questions qui orientent vers la solution du manager"
+  },
+  {
+   "name": "Faire émerger la prise de conscience",
+   "code": "PRISE_CONSCIENCE",
+   "definition": "Capacité à aider le collaborateur à voir sa situation autrement : refléter, partager une observation, interroger une croyance, utiliser le silence ou une image, sans conclure à sa place.",
+   "dimension": "Moi et mon collaborateur",
+   "ordre": 5,
+   "position_x": 320,
+   "position_y": 410,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "ACTION",
+    "DIFFICILE"
+   ],
+   "exemples_demandes": "Collaborateur qui tourne en rond sur le même récit, croyance jamais questionnée (« je ne peux pas lui dire »), insight apporté par le manager au lieu d'être trouvé"
+  },
+  {
+   "name": "Transformer en action et en engagement",
+   "code": "ACTION",
+   "definition": "Capacité à faire passer une prise de conscience en décision, en action concrète et en engagement dont le collaborateur est responsable, puis à en suivre les effets.",
+   "dimension": "Moi et mon collaborateur",
+   "ordre": 6,
+   "position_x": 320,
+   "position_y": 575,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [],
+   "exemples_demandes": "Bon entretien sans suite, plan d'action dicté par le manager, engagement jamais repris à l'entretien suivant"
+  },
+  {
+   "name": "Feedback en posture coach",
+   "code": "FEEDBACK",
+   "definition": "Capacité à donner un retour factuel, avec permission, qui ouvre une réflexion du collaborateur plutôt qu'il ne clôt le sujet par un verdict.",
+   "dimension": "Moi et mon collaborateur",
+   "ordre": 7,
+   "position_x": 920,
+   "position_y": 410,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "DIFFICILE"
+   ],
+   "exemples_demandes": "Feedback donné sans demander, « bon boulot » sans contenu, retour correctif qui ferme toute discussion"
+  },
+  {
+   "name": "Coacher dans la difficulté",
+   "code": "DIFFICILE",
+   "definition": "Capacité à garder le geste de coaching quand l'échange devient difficile : émotion forte, résistance, désaccord, recadrage nécessaire, sans basculer dans l'autorité ni dans l'évitement.",
+   "dimension": "Moi et mon collaborateur",
+   "ordre": 8,
+   "position_x": 720,
+   "position_y": 575,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [],
+   "exemples_demandes": "Larmes ou colère en entretien, collaborateur qui refuse de jouer le jeu, recadrage qui tourne au monologue, désaccord fui"
+  },
+  {
+   "name": "Coacher dans le flux du travail",
+   "code": "FLUX",
+   "definition": "Capacité à utiliser des micro-gestes de coaching dans les échanges du quotidien — une question au lieu d'une réponse, une reformulation au lieu d'un conseil — sans entretien formel.",
+   "dimension": "Moi et mon équipe",
+   "ordre": 1,
+   "position_x": 420,
+   "position_y": 80,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "RITUELS",
+    "COLLECTIF"
+   ],
+   "exemples_demandes": "« Pas le temps de coacher », réponse donnée en trente secondes dans le couloir, coaching réservé à l'entretien annuel"
+  },
+  {
+   "name": "Rituels de coaching",
+   "code": "RITUELS",
+   "definition": "Capacité à installer des rendez-vous réguliers qui appartiennent au collaborateur et sont menés en posture coach : point individuel, entretien de développement, suivi d'objectif.",
+   "dimension": "Moi et mon équipe",
+   "ordre": 2,
+   "position_x": 220,
+   "position_y": 245,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "DELEGATION"
+   ],
+   "exemples_demandes": "Points individuels devenus revues de tâches, entretien de développement expédié, ordre du jour toujours fixé par le manager"
+  },
+  {
+   "name": "Déléguer en coach",
+   "code": "DELEGATION",
+   "definition": "Capacité à faire de chaque délégation une occasion de développement : contracter le résultat, laisser le comment, accompagner l'autonomie et laisser l'erreur enseigner.",
+   "dimension": "Moi et mon équipe",
+   "ordre": 3,
+   "position_x": 220,
+   "position_y": 410,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "COLLECTIF"
+   ],
+   "exemples_demandes": "Délégation reprise au premier écart, suivi qui devient contrôle, collaborateur qui revient tout valider"
+  },
+  {
+   "name": "Coacher le collectif",
+   "code": "COLLECTIF",
+   "definition": "Capacité à appliquer le geste de coaching à l'équipe : questions au groupe, décisions qui émergent, tensions nommées et régulées, réunions qui font réfléchir plutôt qu'écouter.",
+   "dimension": "Moi et mon équipe",
+   "ordre": 4,
+   "position_x": 620,
+   "position_y": 245,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [
+    "CULTURE"
+   ],
+   "exemples_demandes": "Réunions où le manager parle seul, décisions prises pour l'équipe, conflit tranché à la place des personnes"
+  },
+  {
+   "name": "Développer une culture de coaching",
+   "code": "CULTURE",
+   "definition": "Capacité, pour un manager de managers ou un dirigeant, à coacher ses propres managers, à rendre la posture visible et attendue, et à installer les relais qui la font tenir sans lui.",
+   "dimension": "Moi et mon équipe",
+   "ordre": 5,
+   "position_x": 620,
+   "position_y": 410,
+   "seuil": null,
+   "actif": true,
+   "nourrit": [],
+   "exemples_demandes": "Managers intermédiaires qui reproduisent le contrôle, posture portée par une seule personne, formation sans relais sur le terrain"
+  }
+ ],
+ "competences": [
+  {
+   "code": "MOI-01",
+   "name": "Partir de la capacité du collaborateur",
+   "description": "J'aborde chaque échange en considérant que le collaborateur a les ressources pour trouver sa réponse, même quand j'ai la mienne.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "POSTURE_COACH",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je connais le postulat du coaching : l'autre est capable, créatif et entier.",
+    "2": "Dans certains échanges, je laisse le collaborateur chercher au lieu de lui livrer ma réponse.",
+    "3": "Ma première question est « qu'est-ce que tu en penses ? », y compris quand je suis sûr de ma solution."
+   }
+  },
+  {
+   "code": "MOI-02",
+   "name": "Rester curieux plutôt que juger",
+   "description": "Je m'intéresse à la logique du collaborateur, surtout quand elle m'échappe, au lieu de la classer en bien ou en mal.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "POSTURE_COACH",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je repère mes jugements rapides sur un collaborateur et je sais qu'ils ferment l'échange.",
+    "2": "Je parviens parfois à remplacer un jugement par une question sur ce qui l'amène là.",
+    "3": "Je reste curieux face à une position que je désapprouve, et le collaborateur le sent."
+   }
+  },
+  {
+   "code": "MOI-03",
+   "name": "Lâcher le rôle d'expert",
+   "description": "Je résiste au réflexe de diagnostiquer et de prescrire, et je laisse le collaborateur rester l'auteur de sa situation.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "POSTURE_COACH",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais que mon expertise est le premier obstacle à ma posture de coach.",
+    "2": "Je parviens parfois à garder mon diagnostic pour moi pendant tout un échange.",
+    "3": "Je choisis en conscience, à chaque fois, entre apporter mon expertise et faire émerger celle de l'autre."
+   }
+  },
+  {
+   "code": "MOI-04",
+   "name": "Clarifier son double rôle",
+   "description": "Je dis au collaborateur ce que je suis et ce que je ne suis pas : je le coache et je reste son manager, avec ce que cela implique.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "CADRE_ETHIQUE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais qu'un manager n'est jamais un coach neutre, et pourquoi c'est important de le dire.",
+    "2": "J'ai explicité à certains collaborateurs comment j'articule coaching et évaluation.",
+    "3": "Chaque collaborateur sait quand je le coache, quand je l'évalue, et ce qui circule entre les deux."
+   }
+  },
+  {
+   "code": "MOI-05",
+   "name": "Garantir la confidentialité",
+   "description": "Ce qui est dit dans un échange de coaching ne ressort pas ailleurs — entretien annuel, hiérarchie, RH — sauf accord explicite du collaborateur.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "CADRE_ETHIQUE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais qu'une confidence utilisée une seule fois ferme la porte pour longtemps.",
+    "2": "Je demande l'accord du collaborateur avant de réutiliser ce qu'il m'a confié.",
+    "3": "Mon équipe me confie des choses difficiles parce qu'elle sait exactement où elles vont."
+   }
+  },
+  {
+   "code": "MOI-06",
+   "name": "Reconnaître les limites du coaching",
+   "description": "Je repère quand un sujet dépasse le coaching d'un manager — santé, situation personnelle lourde, conflit avec moi — et j'oriente vers la bonne ressource.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "CADRE_ETHIQUE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais que certains sujets ne se coachent pas par un manager, et je sais lesquels.",
+    "2": "Il m'est arrivé d'arrêter un coaching pour orienter vers la RH, un coach externe ou un médecin.",
+    "3": "Je nomme la limite au moment où je la rencontre, sans abandonner le collaborateur."
+   }
+  },
+  {
+   "code": "MOI-07",
+   "name": "Donner son attention entière",
+   "description": "Pendant l'échange, rien d'autre n'existe : ni écran, ni téléphone, ni le point suivant.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "PRESENCE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais ce qui, chez moi, détourne mon attention en entretien.",
+    "2": "Dans la plupart des échanges de coaching, je ferme tout le reste.",
+    "3": "Mon interlocuteur ressent que je suis entièrement là, même dans une journée chargée."
+   }
+  },
+  {
+   "code": "MOI-08",
+   "name": "Habiter le silence",
+   "description": "Je laisse les silences durer, parce que c'est souvent là que le collaborateur réfléchit.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "PRESENCE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais que je comble les silences, et je sais pourquoi.",
+    "2": "Je parviens parfois à laisser un silence de plusieurs secondes sans le remplir.",
+    "3": "Le silence est un outil que j'utilise : je le laisse travailler, même quand il me pèse."
+   }
+  },
+  {
+   "code": "MOI-09",
+   "name": "Suivre ce qui se passe plutôt que son plan",
+   "description": "Je m'adapte à ce qui émerge dans l'échange — une émotion, une porte qui s'ouvre — plutôt que de dérouler mes questions prévues.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "PRESENCE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais qu'un entretien de coaching n'est pas une check-list.",
+    "2": "Il m'arrive de lâcher mon plan pour suivre ce que le collaborateur vient de dire.",
+    "3": "Je danse avec l'instant : je suis l'échange là où il va, sans perdre le contrat."
+   }
+  },
+  {
+   "code": "MOI-10",
+   "name": "Repérer l'envie de sauver",
+   "description": "Je reconnais le moment où je veux résoudre le problème à la place du collaborateur, et je le laisse passer.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "REGULATION",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je connais mon réflexe de sauveur et les situations qui le déclenchent.",
+    "2": "Je repère après coup les moments où j'ai sauvé au lieu de coacher.",
+    "3": "Je sens monter l'envie de sauver en séance et je la laisse passer, sans agir."
+   }
+  },
+  {
+   "code": "MOI-11",
+   "name": "Mettre son émotion de côté",
+   "description": "Quand ce que dit le collaborateur me touche ou m'agace, je le remarque et je reste au service de sa réflexion, pas de la mienne.",
+   "difficulte": "Exigeant",
+   "ordre": 20,
+   "actif": true,
+   "theme": "REGULATION",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais que mes émotions en séance peuvent prendre la place de celles du collaborateur.",
+    "2": "Je parviens parfois à nommer intérieurement mon émotion et à rester centré sur l'autre.",
+    "3": "Mon émotion ne prend jamais la place : au besoin, je la nomme brièvement et je reviens au collaborateur."
+   }
+  },
+  {
+   "code": "MOI-12",
+   "name": "Tolérer de ne pas savoir",
+   "description": "J'accepte de ne pas savoir où va l'échange ni quelle est la bonne réponse, et je continue à faire confiance au processus.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "REGULATION",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais que l'incertitude fait partie du coaching et que vouloir la supprimer tue l'échange.",
+    "2": "Je tiens parfois un échange entier sans savoir où il mène, et il aboutit.",
+    "3": "Ne pas savoir ne me met plus en tension ; c'est l'état normal d'un échange qui travaille."
+   }
+  },
+  {
+   "code": "MOI-13",
+   "name": "Distinguer coacher, former, diriger",
+   "description": "Je sais, à chaque moment, si la situation appelle une question, une explication ou une décision, et ce que chaque posture produit.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "CHOIX_POSTURE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je connais la différence entre coacher, former, diriger et déléguer.",
+    "2": "Je peux dire, après un échange, quelle posture j'ai prise et si c'était la bonne.",
+    "3": "Je choisis ma posture situation par situation, et rarement par habitude."
+   }
+  },
+  {
+   "code": "MOI-14",
+   "name": "Annoncer sa casquette",
+   "description": "Je dis au collaborateur dans quelle posture je suis : « là, je te pose une question », « là, je décide ».",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "CHOIX_POSTURE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais qu'une décision déguisée en question détruit la confiance dans mes questions.",
+    "2": "Il m'arrive d'annoncer explicitement que je sors du coaching pour décider.",
+    "3": "Mon interlocuteur sait toujours dans quelle posture je suis, parce que je le dis."
+   }
+  },
+  {
+   "code": "MOI-15",
+   "name": "Sortir du coaching quand il le faut",
+   "description": "Je reconnais les situations où coacher serait une erreur — urgence, faute, danger — et je reprends la main sans culpabilité.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "CHOIX_POSTURE",
+   "dimension": "Moi, manager",
+   "enonces": {
+    "1": "Je sais qu'il y a des moments où une question est une fuite.",
+    "2": "J'ai su interrompre un coaching pour décider quand la situation l'exigeait.",
+    "3": "Je passe du coaching à la décision avec fluidité, et je reviens au coaching ensuite."
+   }
+  },
+  {
+   "code": "COL-01",
+   "name": "Partir de ce que veut le collaborateur",
+   "description": "J'ouvre l'échange sur ce que le collaborateur veut obtenir de la conversation, avant d'y mettre mon propre sujet.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "CONTRAT",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'un entretien de coaching commence par l'objectif du collaborateur, pas par le mien.",
+    "2": "J'ouvre la plupart de mes entretiens par « de quoi as-tu besoin qu'on parle ? ».",
+    "3": "Le collaborateur apporte le sujet et l'objectif ; j'ajoute le mien seulement s'il reste de la place."
+   }
+  },
+  {
+   "code": "COL-02",
+   "name": "Définir à quoi on verra qu'on a réussi",
+   "description": "J'aide le collaborateur à dire ce qu'il veut avoir en sortant — une décision, une clarté, une option — pour que l'échange ait un cap.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "CONTRAT",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'un objectif de conversation doit être observable en fin d'entretien.",
+    "2": "Je demande parfois « à quoi tu verras que cet échange t'a servi ? ».",
+    "3": "Chaque entretien de coaching a un résultat attendu, nommé par le collaborateur, et on le vérifie à la fin."
+   }
+  },
+  {
+   "code": "COL-03",
+   "name": "Recontracter en cours de route",
+   "description": "Quand l'échange dérive ou révèle un autre sujet, je le nomme et je demande au collaborateur ce qu'il veut travailler.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "CONTRAT",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je repère quand un entretien quitte son objectif initial.",
+    "2": "Il m'arrive de m'arrêter pour demander : « on continue là-dessus ou on revient au sujet de départ ? ».",
+    "3": "Je recontracte naturellement, et le collaborateur garde la main sur ce qu'on travaille."
+   }
+  },
+  {
+   "code": "COL-04",
+   "name": "Accueillir sans juger",
+   "description": "Quoi que dise le collaborateur — erreur, doute, désaccord — ma première réaction lui montre qu'il peut continuer.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "CONFIANCE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais que ma première réaction décide de ce qu'on me dira ensuite.",
+    "2": "Je parviens parfois à accueillir une erreur ou un aveu sans réagir ni corriger.",
+    "3": "Mon équipe me dit les choses tôt, parce qu'elle sait comment je les reçois."
+   }
+  },
+  {
+   "code": "COL-05",
+   "name": "Faire de la place à l'émotion",
+   "description": "Quand une émotion apparaît, je la laisse exister et je la nomme avec le collaborateur, au lieu de la contourner ou de la rassurer trop vite.",
+   "difficulte": "Exigeant",
+   "ordre": 20,
+   "actif": true,
+   "theme": "CONFIANCE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais que rassurer trop vite ferme l'émotion et l'échange.",
+    "2": "Il m'arrive de laisser une émotion s'exprimer en entretien sans la couper.",
+    "3": "L'émotion a sa place dans mes entretiens, et le collaborateur sait qu'il peut la montrer."
+   }
+  },
+  {
+   "code": "COL-06",
+   "name": "Montrer que l'on a confiance en l'autre",
+   "description": "Je dis et je montre au collaborateur ce que je vois de ses forces et de ses ressources, surtout quand il doute.",
+   "difficulte": "Accessible",
+   "ordre": 30,
+   "actif": true,
+   "theme": "CONFIANCE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais que la confiance que je montre au collaborateur nourrit celle qu'il a en lui.",
+    "2": "Je nomme parfois une force du collaborateur au moment où il en a besoin.",
+    "3": "Mes collaborateurs savent ce que je vois de solide en eux, parce que je le leur dis."
+   }
+  },
+  {
+   "code": "COL-07",
+   "name": "Reformuler ce qui a été dit",
+   "description": "Je redis l'essentiel avec les mots du collaborateur, pour vérifier et pour qu'il s'entende.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "ECOUTE_ACTIVE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais ce qu'est une reformulation et à quoi elle sert dans le coaching.",
+    "2": "Je reformule parfois ce que j'ai entendu, et je constate que ça fait avancer l'échange.",
+    "3": "Je reformule naturellement, et le collaborateur se sent compris avant même que je questionne."
+   }
+  },
+  {
+   "code": "COL-08",
+   "name": "Refléter l'émotion et le ton",
+   "description": "J'entends comment c'est dit — hésitation, énergie, lassitude — et je le reflète : « tu as l'air fatigué quand tu en parles ».",
+   "difficulte": "Exigeant",
+   "ordre": 20,
+   "actif": true,
+   "theme": "ECOUTE_ACTIVE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais que le ton et le corps disent souvent plus que les mots.",
+    "2": "Il m'arrive de refléter une émotion perçue, et de voir l'échange s'ouvrir.",
+    "3": "Je reflète ce que j'entends au-delà des mots, avec justesse, sans interpréter à la place de l'autre."
+   }
+  },
+  {
+   "code": "COL-09",
+   "name": "Entendre ce qui n'est pas dit",
+   "description": "Je repère ce que le collaborateur évite, répète ou minimise, et je le lui propose comme une hypothèse.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "ECOUTE_ACTIVE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais que ce qui n'est pas dit est souvent le sujet.",
+    "2": "Il m'arrive de nommer un non-dit sous forme d'hypothèse : « j'ai l'impression que… ».",
+    "3": "Je nomme l'implicite au bon moment, et le collaborateur se sent compris plutôt que percé à jour."
+   }
+  },
+  {
+   "code": "COL-10",
+   "name": "Poser des questions ouvertes et courtes",
+   "description": "Mes questions commencent par quoi, comment, qu'est-ce qui, tiennent en une phrase, et je les pose une à la fois.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "QUESTIONS",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais distinguer une question ouverte d'une question fermée ou orientée.",
+    "2": "Je pose des questions ouvertes et courtes dans une partie de mes échanges, et je vois la différence.",
+    "3": "Mes questions sont ouvertes, courtes, uniques, et laissées au collaborateur, même sous pression de temps."
+   }
+  },
+  {
+   "code": "COL-11",
+   "name": "Questionner à partir de ce qui vient d'être dit",
+   "description": "Ma question suivante naît de la réponse précédente, pas de ma liste ni de ma solution.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "QUESTIONS",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'une question préparée à l'avance ignore souvent ce que l'autre vient de dire.",
+    "2": "Je parviens parfois à construire ma question sur les mots du collaborateur.",
+    "3": "Mes questions suivent le fil du collaborateur, et il sent qu'elles partent de lui."
+   }
+  },
+  {
+   "code": "COL-12",
+   "name": "Questionner sans piloter",
+   "description": "Je questionne pour élargir la réflexion du collaborateur, pas pour l'amener à la conclusion que j'ai déjà.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "QUESTIONS",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'une question peut être une injonction déguisée.",
+    "2": "Il m'arrive de questionner sans savoir où l'autre va arriver, et de l'accepter.",
+    "3": "Je questionne vers l'inconnu, pas vers ma solution, et le collaborateur découvre des options que je n'avais pas."
+   }
+  },
+  {
+   "code": "COL-13",
+   "name": "Partager une observation sans conclure",
+   "description": "Je dis ce que j'observe — un écart, une répétition, une contradiction — et je laisse le collaborateur en faire quelque chose.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "PRISE_CONSCIENCE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je connais la différence entre une observation et une interprétation.",
+    "2": "Il m'arrive de partager une observation et de demander ce que le collaborateur en fait.",
+    "3": "Mes observations ouvrent la réflexion du collaborateur sans lui imposer ma lecture."
+   }
+  },
+  {
+   "code": "COL-14",
+   "name": "Interroger une croyance",
+   "description": "Quand le collaborateur dit « je ne peux pas » ou « c'est comme ça », je l'invite à examiner d'où ça vient et si c'est encore vrai.",
+   "difficulte": "Exigeant",
+   "ordre": 20,
+   "actif": true,
+   "theme": "PRISE_CONSCIENCE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je repère les croyances limitantes dans le discours d'un collaborateur.",
+    "2": "Il m'arrive d'interroger une croyance et de voir le collaborateur la relativiser.",
+    "3": "J'aide le collaborateur à distinguer ce qui est un fait et ce qui est une croyance, et à choisir ce qu'il en fait."
+   }
+  },
+  {
+   "code": "COL-15",
+   "name": "Changer de point de vue",
+   "description": "J'aide le collaborateur à regarder sa situation autrement — depuis un autre acteur, une autre échelle de temps, une image — pour qu'une option apparaisse.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "PRISE_CONSCIENCE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je connais quelques questions et images qui déplacent le regard.",
+    "2": "Il m'arrive d'aider un collaborateur à voir sa situation autrement, et de le voir débloquer.",
+    "3": "Je fais changer de point de vue avec aisance, et mes collaborateurs viennent me voir pour ça."
+   }
+  },
+  {
+   "code": "COL-16",
+   "name": "Faire choisir plutôt que prescrire",
+   "description": "Je laisse le collaborateur choisir son action parmi les options qu'il a vues, plutôt que de lui dire quoi faire.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "ACTION",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'une action choisie tient mieux qu'une action prescrite.",
+    "2": "Je demande parfois « qu'est-ce que tu décides de faire ? » au lieu de proposer.",
+    "3": "Mes entretiens se terminent par une action choisie par le collaborateur, pas par moi."
+   }
+  },
+  {
+   "code": "COL-17",
+   "name": "Conclure par un engagement précis",
+   "description": "Je termine par ce que le collaborateur fera, quand, et comment il saura que c'est fait.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "ACTION",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'une prise de conscience sans engagement ne change rien.",
+    "2": "Je conclus parfois un entretien par un engagement daté et observable.",
+    "3": "Chaque entretien se termine par un engagement précis, et je le reprends à l'entretien suivant."
+   }
+  },
+  {
+   "code": "COL-18",
+   "name": "Suivre et célébrer les progrès",
+   "description": "Je reviens sur les engagements précédents, j'aide à relire ce qui a marché et je nomme les progrès, même petits.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "ACTION",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais que ce qui n'est pas repris est oublié, et que ce qui n'est pas nommé n'est pas vu.",
+    "2": "Je reprends parfois les engagements de l'entretien précédent et je nomme un progrès.",
+    "3": "Le suivi et la reconnaissance du progrès font partie de chaque entretien, et le collaborateur voit son chemin."
+   }
+  },
+  {
+   "code": "COL-19",
+   "name": "Demander la permission",
+   "description": "Avant de donner un retour, je demande si le collaborateur le veut, et je respecte sa réponse.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "FEEDBACK",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'un feedback non demandé est entendu comme un jugement.",
+    "2": "Il m'arrive de demander « tu veux un retour là-dessus ? » avant de le donner.",
+    "3": "Mes feedbacks sont demandés ou autorisés, et ils sont entendus."
+   }
+  },
+  {
+   "code": "COL-20",
+   "name": "Décrire un fait et son effet",
+   "description": "Je décris ce que j'ai observé et l'effet produit, plutôt qu'un trait de personnalité ou un verdict.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "FEEDBACK",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je connais la différence entre un fait observé et une interprétation.",
+    "2": "Je donne parfois un feedback qui part d'un fait précis et de son effet.",
+    "3": "Mes feedbacks sont factuels par défaut, positifs comme correctifs, et personne ne se braque."
+   }
+  },
+  {
+   "code": "COL-21",
+   "name": "Ouvrir la réflexion après le feedback",
+   "description": "Après mon retour, je rends la parole : « qu'est-ce que tu en fais ? », pour que le feedback devienne une prise de conscience et pas une sentence.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "FEEDBACK",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'un feedback qui se termine par ma conclusion ferme le sujet.",
+    "2": "Il m'arrive de terminer un feedback par une question au collaborateur.",
+    "3": "Mes feedbacks se prolongent en réflexion du collaborateur, et c'est lui qui en tire l'action."
+   }
+  },
+  {
+   "code": "COL-22",
+   "name": "Rester coach face à une émotion forte",
+   "description": "Quand le collaborateur pleure, se met en colère ou se ferme, je reste présent, je nomme ce qui se passe et je ne fuis ni ne console trop vite.",
+   "difficulte": "Exigeant",
+   "ordre": 10,
+   "actif": true,
+   "theme": "DIFFICILE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais ce que je fais spontanément face à une émotion forte : fuir, consoler, raisonner.",
+    "2": "J'ai su rester présent face à une émotion forte en entretien, sans la couper.",
+    "3": "Les émotions fortes ne me déstabilisent plus ; je les accueille et l'échange continue."
+   }
+  },
+  {
+   "code": "COL-23",
+   "name": "Travailler avec la résistance",
+   "description": "Quand le collaborateur refuse de jouer le jeu, je m'intéresse à ce que protège sa résistance au lieu de forcer ou d'abandonner.",
+   "difficulte": "Exigeant",
+   "ordre": 20,
+   "actif": true,
+   "theme": "DIFFICILE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je sais qu'une résistance dit quelque chose d'important, et que forcer la renforce.",
+    "2": "Il m'est arrivé de questionner une résistance plutôt que de la contourner.",
+    "3": "La résistance est pour moi un matériau de coaching, pas un obstacle."
+   }
+  },
+  {
+   "code": "COL-24",
+   "name": "Recadrer sans quitter le geste",
+   "description": "Je pose un recadrage clair — fait, écart, attendu — puis je repasse en coaching pour que le collaborateur construise la suite.",
+   "difficulte": "Accessible",
+   "ordre": 30,
+   "actif": true,
+   "theme": "DIFFICILE",
+   "dimension": "Moi et mon collaborateur",
+   "enonces": {
+    "1": "Je connais la structure d'un recadrage et je sais qu'il peut être suivi de coaching.",
+    "2": "J'ai posé des recadrages clairs, puis rendu la main au collaborateur pour la suite.",
+    "3": "Mes recadrages sont nets, puis coachés : le collaborateur en sort responsable de la suite, et la relation intacte."
+   }
+  },
+  {
+   "code": "EQU-01",
+   "name": "Répondre par une question",
+   "description": "Quand on me demande la solution, je renvoie une question — « qu'est-ce que tu proposes ? » — avant de répondre.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "FLUX",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais qu'une réponse immédiate rend dépendant.",
+    "2": "Il m'arrive de répondre à une demande de solution par une question, et de voir l'autre trouver.",
+    "3": "« Qu'est-ce que tu proposes ? » est devenu mon premier réflexe, et l'équipe arrive avec des propositions."
+   }
+  },
+  {
+   "code": "EQU-02",
+   "name": "Coacher en cinq minutes",
+   "description": "Je sais mener un micro-coaching dans un couloir ou en fin de réunion : objectif, une ou deux questions, une action.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "FLUX",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais qu'un geste de coaching tient en quelques minutes.",
+    "2": "J'ai mené des micro-coachings informels avec un objectif et une action.",
+    "3": "Je coache dans le flux du travail sans que ça prenne de temps, et l'équipe ne le remarque même plus."
+   }
+  },
+  {
+   "code": "EQU-03",
+   "name": "Saisir les occasions",
+   "description": "Je repère dans la journée les moments où une question ferait plus qu'une réponse, et je les utilise.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "FLUX",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais que les occasions de coacher sont dans le quotidien, pas dans l'agenda.",
+    "2": "Je repère parfois, après coup, une occasion de coaching que j'ai manquée ou saisie.",
+    "3": "Je vois les occasions en temps réel et j'en saisis plusieurs par jour."
+   }
+  },
+  {
+   "code": "EQU-04",
+   "name": "Tenir des points individuels qui appartiennent au collaborateur",
+   "description": "Chaque collaborateur a un rendez-vous régulier avec moi, dont il fixe l'ordre du jour, mené en posture coach.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "RITUELS",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais qu'un point individuel de coaching n'est pas une revue d'avancement.",
+    "2": "Je tiens des points individuels réguliers où le collaborateur apporte son sujet.",
+    "3": "Chaque collaborateur a son point régulier, en fixe le contenu, et il n'est presque jamais déplacé."
+   }
+  },
+  {
+   "code": "EQU-05",
+   "name": "Mener l'entretien de développement en coach",
+   "description": "L'entretien annuel ou de développement devient une conversation de coaching : objectif du collaborateur, prise de conscience, engagement.",
+   "difficulte": "Accessible",
+   "ordre": 20,
+   "actif": true,
+   "theme": "RITUELS",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais ce qui distingue un entretien d'évaluation d'un entretien de développement.",
+    "2": "J'ai mené des entretiens de développement où le collaborateur a formulé lui-même son objectif.",
+    "3": "Mes entretiens de développement sont attendus par l'équipe, parce qu'ils lui servent."
+   }
+  },
+  {
+   "code": "EQU-06",
+   "name": "Suivre un objectif de développement dans la durée",
+   "description": "Je reprends régulièrement l'objectif de développement de chaque collaborateur, et je l'aide à relire son chemin.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "RITUELS",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais qu'un objectif de développement fixé une fois par an n'avance pas.",
+    "2": "Je reprends parfois un objectif de développement en point individuel.",
+    "3": "Chaque collaborateur a un objectif de développement vivant, suivi à chaque point, et il voit sa progression."
+   }
+  },
+  {
+   "code": "EQU-07",
+   "name": "Contracter le résultat, laisser le comment",
+   "description": "Quand je délègue, je contracte l'objectif, le cadre et les limites, et je laisse le collaborateur choisir sa méthode.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "DELEGATION",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je connais la différence entre déléguer une tâche et déléguer un résultat.",
+    "2": "J'ai délégué des responsabilités entières, en contractant l'objectif et en laissant le comment.",
+    "3": "Je délègue des résultats par défaut, et mon équipe a la liberté de la méthode."
+   }
+  },
+  {
+   "code": "EQU-08",
+   "name": "Suivre en coach, pas en contrôleur",
+   "description": "Mes points de suivi sont des moments où je questionne et j'aide à réfléchir, pas où je vérifie et reprends la main.",
+   "difficulte": "Exigeant",
+   "ordre": 20,
+   "actif": true,
+   "theme": "DELEGATION",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais qu'un suivi peut rassurer ou étouffer selon la posture.",
+    "2": "Mes points de suivi sont parfois menés en questions plutôt qu'en vérification.",
+    "3": "Mon suivi est perçu comme un soutien, et les collaborateurs viennent le chercher."
+   }
+  },
+  {
+   "code": "EQU-09",
+   "name": "Laisser l'erreur enseigner",
+   "description": "Quand le collaborateur se trompe dans un cadre acceptable, je l'aide à en tirer l'apprentissage au lieu de reprendre la main.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "DELEGATION",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais qu'une erreur relue vaut plus qu'une erreur évitée par moi.",
+    "2": "Il m'est arrivé de coacher une erreur plutôt que de la corriger moi-même.",
+    "3": "Je laisse une marge d'erreur explicite, et chaque erreur devient une conversation de coaching."
+   }
+  },
+  {
+   "code": "EQU-10",
+   "name": "Questionner le groupe plutôt que le diriger",
+   "description": "En réunion, je pose des questions ouvertes à l'équipe et je laisse les réponses venir d'elle.",
+   "difficulte": "Accessible",
+   "ordre": 10,
+   "actif": true,
+   "theme": "COLLECTIF",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais mesurer mon temps de parole en réunion.",
+    "2": "Mes réunions font parfois émerger les réponses de l'équipe plutôt que de moi.",
+    "3": "Mes réunions sont des espaces de réflexion : l'équipe y parle plus que moi et en sort avec ses décisions."
+   }
+  },
+  {
+   "code": "EQU-11",
+   "name": "Faire émerger une décision collective",
+   "description": "Je sais quand une décision doit venir de l'équipe, je conduis la réflexion en coach et je tranche seulement si le groupe n'y arrive pas.",
+   "difficulte": "Exigeant",
+   "ordre": 20,
+   "actif": true,
+   "theme": "COLLECTIF",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais distinguer les décisions à prendre seul, à consulter, ou à faire émerger.",
+    "2": "J'ai conduit des décisions collectives avec un cadre, des questions et une issue.",
+    "3": "L'équipe sait comment on décide chez nous, et les décisions collectives sont tenues."
+   }
+  },
+  {
+   "code": "EQU-12",
+   "name": "Coacher une tension entre collaborateurs",
+   "description": "Face à un conflit dans l'équipe, j'aide les personnes à se parler et à trouver leur issue, sans me substituer ni prendre parti.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "COLLECTIF",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je connais les postures qui aggravent un conflit : prendre parti, trancher à leur place, éviter.",
+    "2": "J'ai accompagné une conversation entre deux collaborateurs en tension, en questionnant plutôt qu'en arbitrant.",
+    "3": "Je coache les tensions dans mon équipe avec méthode, et elles se règlent sans moi la fois suivante."
+   }
+  },
+  {
+   "code": "EQU-13",
+   "name": "Coacher ses managers",
+   "description": "J'applique à mes propres managers le geste que je leur demande : contrat, écoute, questions, prise de conscience, engagement.",
+   "difficulte": "Exigeant",
+   "ordre": 10,
+   "actif": true,
+   "theme": "CULTURE",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais que mes managers managent comme je les manage.",
+    "2": "J'ai des échanges avec mes managers où je les coache plutôt que de leur dire quoi faire.",
+    "3": "Mes managers sont coachés par moi au quotidien, et ils le reproduisent avec leurs équipes."
+   }
+  },
+  {
+   "code": "EQU-14",
+   "name": "Rendre la posture visible et attendue",
+   "description": "Je dis ce que j'attends des managers de mon périmètre en matière de coaching, je le reconnais et je le mesure.",
+   "difficulte": "Exigeant",
+   "ordre": 20,
+   "actif": true,
+   "theme": "CULTURE",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais que ce qui n'est ni attendu ni reconnu disparaît.",
+    "2": "J'ai rendu explicite, auprès de mes managers, la posture de coach attendue.",
+    "3": "La posture de manager-coach fait partie de ce sur quoi mes managers sont évalués et reconnus."
+   }
+  },
+  {
+   "code": "EQU-15",
+   "name": "Installer des relais qui tiennent sans soi",
+   "description": "Je mets en place supervision entre pairs, binômes et rituels qui font vivre le geste de coaching dans mon périmètre sans dépendre de moi.",
+   "difficulte": "Exigeant",
+   "ordre": 30,
+   "actif": true,
+   "theme": "CULTURE",
+   "dimension": "Moi et mon équipe",
+   "enonces": {
+    "1": "Je sais que sans relais, la posture s'éteint avec le départ de celui qui la portait.",
+    "2": "J'ai mis en place certains relais : binômes de managers, supervision entre pairs, rituels.",
+    "3": "Le geste de coaching tient dans mon périmètre sans que j'aie à le porter seul."
+   }
+  }
+ ],
+ "ressources": []
+}
