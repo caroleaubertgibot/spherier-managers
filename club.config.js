@@ -197,29 +197,66 @@ const MAX_CIBLES_MAINTENANT = 3;
 
 // --- Le ciel (page d'accueil desktop) ---------------------------------------------
 //
-// `ordre` est l'ordre VISUEL des blocs. Ici il coïncide avec l'ordre canonique, et ce
-// n'est pas un hasard : les trois dimensions racontent une progression — ce qui se
-// travaille sur soi, puis l'entretien, puis le collectif. La lire de gauche à droite
-// est la bonne lecture.
+// `ordre` est l'ordre VISUEL des blocs, et il est DÉLIBÉRÉMENT distinct de l'ordre
+// canonique du référentiel. Il ne vaut que pour le ciel : l'API, la vue d'ensemble, le
+// parcours « M'évaluer » et la navigation par dimension suivent `DIMENSIONS` et ne sont
+// modifiés nulle part.
+//
+// La disposition est RADIALE, pas linéaire. « Moi, manager » est le centre du modèle :
+// les deux autres dimensions sont littéralement nommées par rapport à lui — moi et mon
+// collaborateur, moi et mon équipe. Les placer à sa droite en file suggérerait un ordre
+// de lecture, donc une progression obligatoire, qui n'existe pas. Autour d'un centre,
+// la même géométrie dit la bonne chose : deux cercles qui s'élargissent depuis soi, le
+// plus proche à gauche, le plus large à droite. C'est la disposition du club de dev
+// (`['AUT', 'MOI', 'MON']`, centre `MOI`), pour les mêmes raisons.
 //
 // `centre` est le bloc sur lequel le ciel s'ouvre, centré, avec une amorce de chaque
-// côté. On centre « Moi et mon collaborateur » : c'est le cœur du produit — la
-// conversation de coaching elle-même — et le bloc le plus dense (8 thématiques,
-// 24 compétences) comme le plus large (600 px d'emprise contre 400 pour les deux
-// autres). C'est le rôle que « Moi » joue dans le club de dev.
+// côté. C'est donc le premier bloc que voit un manager qui arrive.
 //
 // `largeursFil` règle la largeur du fil décoratif de part et d'autre du bloc centré.
-// Le fil ne porte aucun sens : sa largeur sert à ÉGALISER ce que montre chaque amorce.
+// Le fil ne porte aucun sens : sa largeur est le seul réglage libre, et on la dépense à
+// ÉGALISER ce que montre chaque amorce.
 //
-// ⚠️ VALEURS PROVISOIRES, À REMESURER SUR LE RENDU RÉEL. Celles du club de dev
-// (105 / 55) ont été obtenues par balayage sur des blocs de 520 / 260 / 390 px ; ici
-// les blocs font 400 / 600 / 400. Elles ne veulent rien dire sur cette géométrie.
-// La mesure se fait en exigeant les trois en-têtes entiers — un en-tête est COLLANT et
-// se cale au bord, mais ne peut pas être plus étroit que lui-même.
+// ⚠️ ATTENTION AUX CLÉS : `largeursFil` est indexé par la dimension EXTÉRIEURE de
+// chaque fil, jamais par le centre. Déplacer `centre` change donc les clés attendues —
+// une clé devenue inutile est ignorée SANS ERREUR, et le fil orphelin retombe sur le
+// défaut CSS de 96 px. Avec `centre: 'MOI'`, les deux clés sont COL et EQU.
+//
+// Les valeurs ci-dessous sont MESURÉES sur le rendu réel, pas reprises du club de dev :
+// ses 105 / 55 viennent d'une tout autre géométrie et ne veulent rien dire ici.
+//
+// La piste fait `min(1240px, 100vw - 16px)` : au-delà de 1256 px de fenêtre elle est
+// CONSTANTE, donc la mesure vaut pour tous les écrans de bureau usuels. Blocs réels :
+// 769 (COL) · 585 (MOI) · 561 (EQU). Centré sur MOI, il reste 327 px par côté.
+//
+// Deux contraintes, mesurées par balayage de 2 en 2 px :
+//
+//   1. LES TROIS EN-TÊTES ENTIERS. Un en-tête est collant et se cale au bord, mais ne
+//      peut pas être plus étroit que lui-même : sous une certaine amorce il est coupé,
+//      et la dimension perd son nom, son compte et son bouton d'entrée. « Moi et mon
+//      collaborateur » est le plus long (298 px) et plafonne le fil GAUCHE à 22 px ;
+//      « Moi et mon équipe » (225 px) plafonne le fil DROIT à 95 px.
+//
+//   2. ÉGALISER CE QUE MONTRE CHAQUE AMORCE. Contre toute attente ce n'est pas le bloc
+//      le plus fourni qui déborde : le bord DROIT de COL est clairsemé et présente une
+//      falaise — à 268 px d'amorce il ne laisse voir qu'une seule thématique, à 278 il
+//      en laisse voir quatre d'un coup. Il faut donc passer cette falaise, ce que la
+//      contrainte 1 impose de toute façon. Le bord GAUCHE de EQU, lui, est régulier.
+//
+// Retenu : 16 / 56, avec une marge de sécurité sous chaque plafond (6 px et 39 px) pour
+// absorber un rendu de police légèrement différent. Résultat mesuré :
+//
+//      amorce gauche  312 px · 4 thématiques visibles · 1 libellé entier · en-tête OK
+//      amorce droite  272 px · 3 thématiques visibles · 2 libellés entiers · en-tête OK
+//
+// Sous 1256 px de fenêtre la piste se resserre et les amorces fondent : il n'y a là
+// aucun réglage qui tienne, et le ciel disparaît de toute façon sous 640 px.
+// À refaire si la police de la constellation, celle des en-têtes, les noms de dimension
+// ou les positions changent.
 const CIEL = {
-  ordre: ['MOI', 'COL', 'EQU'],
-  centre: 'COL',
-  largeursFil: { MOI: 80, EQU: 80 },
+  ordre: ['COL', 'MOI', 'EQU'],
+  centre: 'MOI',
+  largeursFil: { COL: 16, EQU: 56 },
 };
 
 // --- Journal de démarrage ---------------------------------------------------------
